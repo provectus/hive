@@ -11,26 +11,18 @@
     <profile>
       <id>github</id>
       <repositories>
+        <properties>
+          <altSnapshotDeploymentRepository>github::default::https://maven.pkg.github.com/provectus/hive</altSnapshotDeploymentRepository>
+          <altReleaseDeploymentRepository>github::default::https://maven.pkg.github.com/provectus/hive</altReleaseDeploymentRepository>
+        </properties>
         <repository>
           <id>central</id>
           <name>central</name>
           <url>https://repo.maven.apache.org/maven2</url>
-          <layout>default</layout>
-          <releases>
-            <enabled>false</enabled>
-            <checksumPolicy>warn</checksumPolicy>
-          </releases>
         </repository>
         <repository>
           <id>github</id>
           <url>https://maven.pkg.github.com/provectus/*</url>
-          <layout>default</layout>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
         </repository>
       </repositories>
     </profile>
